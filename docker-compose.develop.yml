@@ -1,6 +1,6 @@
 services:
   node-server:
-    image: ghcr.io/laxamentumtech/audnexus:develop
+    image: ghcr.io/laxamentumtech/audnexus:develop@sha256:ef82178f0c6cbeed84f7c1f9b95deef9f6741cf10f83c8c971ce59c2f2625f7c
     restart: always
     environment:
       ADP_TOKEN: ${ADP_TOKEN}
@@ -35,7 +35,7 @@ services:
       - '127.0.0.1:27017:27017'
 
   redis:
-    image: redis:8.6-alpine
+    image: redis:8.6-alpine@sha256:c5e375abb885e6b2021c0377879e4890bf76f9065b8922ffc113f2b226b9fc17
     restart: always
     networks:
       - internal
